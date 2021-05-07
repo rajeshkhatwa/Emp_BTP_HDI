@@ -1,0 +1,33 @@
+# for data entry
+
+insert into employee
+values(10002, 'rajesh.khatwa@gmail.com','Rajesh', 'Khatwa');
+
+insert into employee
+values(10003, 'rachel.khatwa@gmail.com','Rachel', 'Khatwa');
+
+insert into employee
+values(10004, 'shanaya.khatwa@gmail.com','Shanaya', 'Khatwa');
+
+
+# Get data from Postman
+http://localhost:8093/api/employees
+
+
+#to get specific Empolyee
+
+http://localhost:8093/api/employees/10003
+
+
+### Post call
+
+http://localhost:8093/api/employees
+
+{
+"firstName": "Vivek",
+"lastName": "singh",
+"email": "vivek.singh@gmail.com"
+}
+
+
+and also select RAW and data format JSON in Postman
