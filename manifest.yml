@@ -1,0 +1,13 @@
+---
+applications:
+  - name: uploaded
+    memory: 1024M
+    buildpack: sap_java_buildpack
+    instances: 1
+    random-route: true
+    host: khatwa-jpa
+    timeout: 100
+    path: ./target/student-0.0.2-SNAPSHOT.jar
+    
+services: 
+    - hana_instance_schema
