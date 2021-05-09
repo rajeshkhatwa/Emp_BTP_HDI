@@ -1,5 +1,8 @@
 This is with hibernate with h2 database
 
+Repository https://github.com/rajeshkhatwa/employee.git
+
+
 # for data entry
 
 insert into employee
