@@ -1,3 +1,5 @@
+This is with hibernate with h2 database
+
 # for data entry
 
 insert into employee
