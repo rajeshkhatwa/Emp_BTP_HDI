@@ -1,9 +1,11 @@
 This is with hibernate with h2 database
 
 Repository https://github.com/rajeshkhatwa/employee.git
+Change the Git Repo to :
 
+https://github.com/rajeshkhatwa/Emp_BTP_HDI.git 
 
-# for data entry
+# for data entry.
 
 insert into employee
 values(10002, 'rajesh.khatwa@gmail.com','Rajesh', 'Khatwa');
