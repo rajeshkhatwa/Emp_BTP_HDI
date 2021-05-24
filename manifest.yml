@@ -5,6 +5,6 @@ applications:
     buildpack: sap_java_buildpack
     instances: 1
     random-route: true
-    host: khatwa-jpa
+    host: khatwa-employee
     timeout: 100
     path: ./target/employee-0.0.1-SNAPSHOT.jar
