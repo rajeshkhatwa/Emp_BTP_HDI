@@ -38,3 +38,6 @@ http://localhost:8093/api/employees
 
 
 and also select RAW and data format JSON in Postman
+
+
+http://localhost:whatever_port_of_webserver/h2-console
