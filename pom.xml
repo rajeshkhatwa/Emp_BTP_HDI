@@ -33,6 +33,10 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -44,7 +48,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-cloudfoundry-connector</artifactId>
-			<version>2.0.1.RELEASE</version>
+			<version>2.0.7.RELEASE</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-spring-service-connector -->
 		<dependency>
@@ -58,16 +62,46 @@
 			<artifactId>spring-cloud-cloudfoundry-hana-service-connector</artifactId>
 			<version>1.0.4.RELEASE</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.pivotal.cfenv/java-cfenv-boot -->
+		<dependency>
+			<groupId>io.pivotal.cfenv</groupId>
+			<artifactId>java-cfenv-boot</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc -->
+		<!-- <dependency> <groupId>com.sap.cloud.db.jdbc</groupId> <artifactId>ngdbc</artifactId> 
+			<version>2.3.55</version> <scope>system</scope> <systemPath>${project.basedir}/src/main/resources/ngdbc-2.3.55.jar</systemPath> 
+			</dependency> -->
+
 		<dependency>
 			<groupId>com.sap.cloud.db.jdbc</groupId>
 			<artifactId>ngdbc</artifactId>
-			<version>2.3.55</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/ngdbc-2.3.55.jar</systemPath>
+			<version>2.4.76</version>
 		</dependency>
 
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<activatedProperties>dev</activatedProperties>
+			</properties>
+		</profile>
+		<profile>
+			<id>cloud</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<activatedProperties>cloud</activatedProperties>
+			</properties>
+
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>

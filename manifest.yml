@@ -8,3 +8,7 @@ applications:
     host: khatwa-employee
     timeout: 100
     path: ./target/employee-0.0.1-SNAPSHOT.jar
+env:
+      SPRING_PROFILES_ACTIVE: cloud
+services:
+- hana_instance_schema      
